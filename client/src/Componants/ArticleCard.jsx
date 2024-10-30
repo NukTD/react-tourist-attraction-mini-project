@@ -16,12 +16,12 @@ function ArticleCard({ title, url, description, mainPhoto, tags, subPhotos }) {
         <a
           href={url}
           target="blank"
-          className="read-more text-sm text-sky-400 text-[1.76rem] underline"
+          className="read-more text-sm text-sky-400 text-[1.77rem] underline"
         >
           อ่านต่อ
         </a>
         {/* Catagories */}
-        <div className="Catagories text-xs text-slate-500 text-[1.76rem] mt-6">
+        <div className="Catagories text-xs text-slate-500 text-[1.77rem] mt-6">
           <span>หมวด</span>
           {tags.map((tag, index) => (
             <span key={index} className="underline ml-2">

@@ -9,8 +9,9 @@ function ArticleHighlight() {
 
   async function dataTouristAttraction() {
     try {
-      let response = await axios.get("http://localhost:4001/trips");
-      console.log("Data from API:", response.data);
+      let response = await axios.get(
+        `http://localhost:4001/trips?keywords=${searchText}`
+      );
       setTouristLocation(response.data.data);
     } catch (error) {
       console.log(error);
@@ -19,10 +20,10 @@ function ArticleHighlight() {
 
   useEffect(() => {
     dataTouristAttraction();
-  }, []);
+  }, [searchText]);
   return (
     <>
-      <div className="mx-44 mt-10">
+      <div className="mx-44 mt-10 text-2xl">
         <p>ค้นหาที่เที่ยว</p>
         <div className="search border-b-2">
           <input
